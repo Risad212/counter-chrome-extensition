@@ -1,0 +1,35 @@
+{
+  "name": "my chrome",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "logo.png"
+   },
+   "content_scripts": [
+      {
+         "matches": [
+            "<all_urls>"
+         ],
+         "js": ["content.js"],
+         "css": ["style.css"]
+      }
+   ],
+   "background": {
+		"scripts": [
+			"background.js"
+		]
+	},
+    "permissions": [
+		"<all_urls>",
+      "activeTab",
+		"tabs",
+		"notifications",
+		"cookies",
+		"storage",
+		"http://fonts.googleapis.com/",
+      "https://fonts.googleapis.com/"
+	],
+   "browser_action": {
+      "default_icon": "logo.png"
+   }
+}
