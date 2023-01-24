@@ -30,7 +30,7 @@ let counterPlusElem = document.querySelector('.plus');
 
 
 chrome.storage.sync.get('value', function(data){
-    let res = data.value;  
+    let res = data.value ? data.value : 0;  
     modifyPlus(res)
     modifyMinus(res)
     updateDisplay(res);
@@ -60,7 +60,6 @@ function modifyMinus(count){
 function updateDisplay(data){
     counterDisplayElem.innerHTML = `count: ${data?data: 0}`;
 };
-
 
 
 
