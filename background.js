@@ -4,3 +4,4 @@ chrome.browserAction.onClicked.addListener(function(){
         file: 'content.js'
     })
 })
+

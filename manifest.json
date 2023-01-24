@@ -1,5 +1,5 @@
 {
-  "name": "my chrome",
+  "name": "counter-chrome-extensition",
   "version": "0.0.1",
   "manifest_version": 2,
   "icons": {
