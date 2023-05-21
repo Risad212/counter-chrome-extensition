@@ -1,0 +1,26 @@
+body{
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+.counter-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #fff;
+}
+.value {
+    font-size: 30px;
+    text-align: center;
+    font-weight: 700;
+    width: 9%;
+    text-transform: capitalize;
+    margin: 0 1rem;
+}
+button {
+    padding: 8px 25px;
+    font-size: 20px;
+    border: none;
+    background: #44bea2de;
+    color: #fff;
+}
