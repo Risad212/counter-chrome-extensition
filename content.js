@@ -1,4 +1,4 @@
-let markUp = `
+var markUp = `
 <html lang="en">
 <head>
     <title>counter app</title>
@@ -20,13 +20,21 @@ let markUp = `
 </html>
 `
 
-document.documentElement.innerHTML = markUp
+// document.documentElement.innerHTML = markUp;
+
+chrome.runtime.onMessage.addListener(
+    function(request, sender, sendResponse) {
+        if(request){
+            document.documentElement.innerHTML = markUp;
+        }
+    }
+  );
 
 
 
-let counterDisplayElem = document.querySelector('.value');
-let counterMinusElem = document.querySelector('.minus');
-let counterPlusElem = document.querySelector('.plus');
+var counterDisplayElem = document.querySelector('.value');
+var counterMinusElem = document.querySelector('.minus');
+var counterPlusElem = document.querySelector('.plus');
 
 
 chrome.storage.sync.get('value', function(data){
@@ -60,6 +68,7 @@ function modifyMinus(count){
 function updateDisplay(data){
     counterDisplayElem.innerHTML = `count: ${data?data: 0}`;
 };
+
 
 
 
